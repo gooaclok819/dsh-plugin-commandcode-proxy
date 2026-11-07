@@ -1,0 +1,6 @@
+# dsh-commandcode-proxy bundle patch: inserts one bare plugin row.
+# The node half (exports ".") runs in the host process and owns the
+# proxy.mjs child process; there is no browser half.
+- insert:
+    - id: commandcode-proxy
+      name: '@local/dsh-commandcode-proxy'

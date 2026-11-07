@@ -1,0 +1,4 @@
+{
+  "title": "Command-Code Proxy",
+  "description": "Starts the local commandcode-proxy reverse proxy (default 127.0.0.1:3050) while the DSH profile is loaded and stops it on unload."
+}

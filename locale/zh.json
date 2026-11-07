@@ -1,0 +1,4 @@
+{
+  "title": "Command-Code 代理与用量",
+  "description": "随 DSH 启动本地 commandcode-proxy 反代（默认 127.0.0.1:3050），并在设置中提供 Command-Code 用量面板。"
+}

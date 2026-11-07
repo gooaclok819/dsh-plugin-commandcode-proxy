@@ -1,0 +1,36 @@
+{
+  "name": "@local/dsh-commandcode-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Keeps the local Command-Code reverse proxy (proxy.mjs) running for as long as the DSH profile is loaded, and adds a Command-Code usage section to Settings.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json"
+  ],
+  "meta": {
+    "title": "Command-Code 代理与用量",
+    "description": "随 DSH 启动本地 commandcode-proxy 反代（默认 127.0.0.1:3050），并在设置中提供 Command-Code 用量面板。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
